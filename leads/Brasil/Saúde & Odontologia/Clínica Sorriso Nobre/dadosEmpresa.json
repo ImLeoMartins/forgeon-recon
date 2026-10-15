@@ -1,0 +1,94 @@
+{
+  "meta": {
+    "project_name": "Clínica Sorriso Nobre",
+    "generated_at": "2026-10-15",
+    "language": "pt-BR",
+    "country": "Brasil",
+    "category": "Saúde & Odontologia",
+    "niche": "dentist"
+  },
+  "contact": {
+    "nome": "Clínica Sorriso Nobre",
+    "telefone": "+55 11 3123-4567",
+    "endereco": "Av. Paulista, 1800 - Bela Vista, São Paulo - SP, Brasil",
+    "nota_google": "4.9",
+    "total_avaliacoes": "320 avaliações",
+    "horarios": [
+      "segunda a sexta: 08:00–19:00",
+      "sábado: 08:00–13:00"
+    ],
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=Clinica+Sorriso+Nobre"
+  },
+  "site": {
+    "tem_site_proprio": true,
+    "url": "https://sorrisonobre-antigo.com.br",
+    "tipo": "site_proprio",
+    "status": "no_ar",
+    "status_http": 200,
+    "https": false,
+    "viewport_meta": false,
+    "mobile_ok": false,
+    "tempo_carga_s": 7.4,
+    "tecnologia": [
+      "wordpress",
+      "elementor"
+    ],
+    "ano_copyright": 2019,
+    "titulo": "Home - Dr. Nobre Odontologia Estética",
+    "descricao": "",
+    "emails": [
+      "atendimento@sorrisonobre.com.br"
+    ],
+    "redes_sociais": {},
+    "whatsapp_no_site": false,
+    "json_ld": {},
+    "pagespeed": {
+      "performance_mobile": 34,
+      "fcp": "3.8s",
+      "lcp": "6.2s"
+    },
+    "score_qualidade": 42,
+    "qualidade": "ruim",
+    "problemas": [
+      "sem HTTPS (alerta de segurança no Chrome)",
+      "sem meta viewport (layout quebrado no celular)",
+      "carregamento lento (7.4s)",
+      "copyright desatualizado (2019)"
+    ],
+    "oportunidade": "redesign",
+    "motivo": "site fraco e inseguro: sem HTTPS, lento e não adaptado ao mobile"
+  },
+  "lead": {
+    "score": 82,
+    "classe": "A",
+    "detalhes": {
+      "oportunidade": 35,
+      "reputacao": 15,
+      "volume": 12,
+      "contato": 20
+    },
+    "motivos": [
+      "site existente fraco precisando de redesign urgente",
+      "nota 4.9 excelente na Paulista",
+      "email corporativo e telefone fixo"
+    ]
+  },
+  "design_system": {
+    "accent": "#0284C7",
+    "neutral_base": [
+      "#FFFFFF",
+      "#F8FAFC",
+      "#0F172A"
+    ],
+    "mode": "light",
+    "heading_font": "Plus Jakarta Sans",
+    "body_font": "DM Sans",
+    "radius_system": "soft",
+    "cores": [
+      "#0284C7",
+      "#0EA5E9",
+      "#F1F5F9"
+    ]
+  },
+  "outreach_status": "novo"
+}

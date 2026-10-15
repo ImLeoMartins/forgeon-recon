@@ -1,0 +1,94 @@
+{
+  "meta": {
+    "project_name": "Bar do Zé Pinheiros",
+    "generated_at": "2026-10-14",
+    "language": "pt-BR",
+    "country": "Brasil",
+    "category": "Restaurantes e Bares",
+    "niche": "bar"
+  },
+  "contact": {
+    "nome": "Bar do Zé Pinheiros",
+    "telefone": "+55 11 98765-4321",
+    "endereco": "Rua dos Pinheiros, 452 - Pinheiros, São Paulo - SP, Brasil",
+    "nota_google": "4.7",
+    "total_avaliacoes": "840 avaliações",
+    "horarios": [
+      "terça-feira: 17:00–01:00",
+      "quarta-feira: 17:00–01:00",
+      "quinta-feira: 17:00–02:00",
+      "sexta-feira: 17:00–03:00",
+      "sábado: 12:00–03:00",
+      "domingo: 12:00–22:00"
+    ],
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=Bar+do+Ze+Pinheiros"
+  },
+  "site": {
+    "tem_site_proprio": false,
+    "url": "https://instagram.com/bardoze_pinheiros",
+    "tipo": "rede_social",
+    "status": null,
+    "status_http": null,
+    "https": true,
+    "viewport_meta": null,
+    "mobile_ok": null,
+    "tempo_carga_s": null,
+    "tecnologia": [],
+    "ano_copyright": null,
+    "titulo": "Bar do Zé (@bardoze_pinheiros) • Fotos e Vídeos no Instagram",
+    "descricao": "O autêntico boteco de Pinheiros com petiscos artesanais e chopp artesanal trincando.",
+    "emails": [
+      "contato@bardoze.com.br"
+    ],
+    "redes_sociais": {
+      "instagram": "https://instagram.com/bardoze_pinheiros",
+      "whatsapp": "https://wa.me/5511987654321"
+    },
+    "whatsapp_no_site": true,
+    "json_ld": {},
+    "pagespeed": null,
+    "score_qualidade": 25,
+    "qualidade": "ruim",
+    "problemas": [
+      "sem site próprio (apenas link para rede social)",
+      "ausência de cardápio indexado no Google"
+    ],
+    "oportunidade": "criar_site",
+    "motivo": "só tem rede social/agregador como link no Google Maps"
+  },
+  "lead": {
+    "score": 95,
+    "classe": "A",
+    "detalhes": {
+      "oportunidade": 50,
+      "reputacao": 15,
+      "volume": 16,
+      "contato": 14
+    },
+    "motivos": [
+      "sem site no Google Maps (oportunidade máxima)",
+      "nota 4.7 com alta aprovação",
+      "840 avaliações ativas",
+      "celular e WhatsApp direto identificado"
+    ]
+  },
+  "design_system": {
+    "accent": "#454DFC",
+    "neutral_base": [
+      "#08090D",
+      "#101118",
+      "#F4F4F7"
+    ],
+    "mode": "dark",
+    "heading_font": "Montserrat",
+    "body_font": "Space Grotesk",
+    "radius_system": "pill (999px)",
+    "cores": [
+      "#454DFC",
+      "#85A9FA",
+      "#9070F7",
+      "#4128FB"
+    ]
+  },
+  "outreach_status": "novo"
+}

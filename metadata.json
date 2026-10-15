@@ -1,0 +1,6 @@
+{
+  "name": "Forgeon Recon",
+  "description": "Plataforma de inteligência de leads, scraping do Google Maps e auditoria de sites com dashboard administrativa em tempo real.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,33 @@
+# Dependências
+node_modules/
+.pnp
+.pnp.js
+
+# Build
+dist/
+build/
+
+# Caches e temporários
+.aistudio/
+.cache/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+ENV/
+
+# Leads gerados (opcional manter apenas os de demo)
+leads/*
+!leads/Brasil/
+!leads/Brasil/**
+
+# Sistema
+.DS_Store
+Thumbs.db

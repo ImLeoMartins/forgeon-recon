@@ -1,0 +1,152 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: dark;
+  /* Surfaces (3 níveis + void) */
+  --void: #08090D;
+  --s1: #101118;
+  --s2: #171923;
+  --s3: #1F2230;
+
+  /* Linhas */
+  --line: #292B38;
+  --line-strong: #6C6F82;
+
+  /* Texto */
+  --text: #F4F4F7;
+  --muted: #A3A6B5;
+
+  /* Marca Forgeon */
+  --ultra: #4128FB;
+  --blue: #454DFC;
+  --violet: #9070F7;
+  --peri: #85A9FA;
+  --accent-text: #85A9FA;
+
+  /* Gradientes */
+  --g-primary: linear-gradient(135deg, #6F41FA, #454DFC 55%, #85A9FA);
+  --g-action: linear-gradient(135deg, #4128FB, #454DFC);
+  --g-spectrum: linear-gradient(135deg, #9070F7, #454DFC 55%, #85A9FA);
+  --g-deep: linear-gradient(135deg, #1B1252, #151E6E 55%, #0D2257);
+
+  /* Raios de borda */
+  --r-s: 8px;
+  --r-m: 16px;
+  --r-l: 24px;
+  --r-pill: 999px;
+
+  /* Glow e elevação */
+  --glow-1: 0 0 0 1px rgba(69, 77, 252, 0.35), 0 8px 24px -8px rgba(65, 40, 251, 0.45);
+  --glow-2: 0 0 0 1px rgba(69, 77, 252, 0.6), 0 16px 48px -12px rgba(133, 169, 250, 0.6);
+
+  /* Transição e movimento */
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
+  --d-fast: 180ms;
+  --d-base: 280ms;
+}
+
+@theme {
+  --font-heading: 'Montserrat', system-ui, -apple-system, sans-serif;
+  --font-sans: 'Space Grotesk', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  --color-forgeon-void: #08090D;
+  --color-forgeon-s1: #101118;
+  --color-forgeon-s2: #171923;
+  --color-forgeon-s3: #1F2230;
+  --color-forgeon-line: #292B38;
+  --color-forgeon-line-strong: #6C6F82;
+  --color-forgeon-text: #F4F4F7;
+  --color-forgeon-muted: #A3A6B5;
+  --color-forgeon-ultra: #4128FB;
+  --color-forgeon-blue: #454DFC;
+  --color-forgeon-violet: #9070F7;
+  --color-forgeon-peri: #85A9FA;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--void);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+  letter-spacing: -0.02em;
+}
+
+/* Forgeon Action Button */
+.btn-forgeon-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: var(--g-action);
+  color: #FFFFFF;
+  border-radius: var(--r-pill);
+  font-family: var(--font-sans);
+  font-weight: 600;
+  box-shadow: var(--glow-1);
+  transition: transform var(--d-fast) var(--ease), box-shadow var(--d-base) var(--ease), background var(--d-base);
+  border: 1px solid transparent;
+}
+
+.btn-forgeon-primary:hover {
+  box-shadow: var(--glow-2);
+  transform: translateY(-2px);
+}
+
+.btn-forgeon-primary:active {
+  transform: translateY(0);
+}
+
+/* Forgeon Secondary Button */
+.btn-forgeon-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: transparent;
+  color: var(--text);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--r-pill);
+  font-family: var(--font-sans);
+  font-weight: 600;
+  transition: background var(--d-fast) var(--ease), border-color var(--d-fast) var(--ease);
+}
+
+.btn-forgeon-secondary:hover {
+  background: var(--s2);
+  border-color: var(--text);
+}
+
+/* Forgeon Interactive Card */
+.forgeon-card {
+  background: var(--s1);
+  border: 1px solid var(--line);
+  border-radius: var(--r-l);
+  transition: transform var(--d-base) var(--ease), box-shadow var(--d-base) var(--ease), border-color var(--d-base);
+}
+
+.forgeon-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--glow-1);
+  border-color: var(--violet);
+}
+
+/* Custom Forgeon Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--void);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--line);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--line-strong);
+}
