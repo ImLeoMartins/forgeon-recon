@@ -7,6 +7,7 @@ interface LeadDossierModalProps {
   onClose: () => void;
   onExportZip: (caminho: string) => void;
   onStatusUpdated?: () => void;
+  onDeleteLead?: (caminho: string) => void;
 }
 
 export const LeadDossierModal: React.FC<LeadDossierModalProps> = ({
@@ -14,6 +15,7 @@ export const LeadDossierModal: React.FC<LeadDossierModalProps> = ({
   onClose,
   onExportZip,
   onStatusUpdated,
+  onDeleteLead,
 }) => {
   const [loading, setLoading] = useState(true);
   const [leadData, setLeadData] = useState<any>(null);
@@ -108,7 +110,23 @@ export const LeadDossierModal: React.FC<LeadDossierModalProps> = ({
             </div>
           </div>
 
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2.5">
+            {onDeleteLead && (
+              <button
+                onClick={() => {
+                  onDeleteLead(caminhoAbsoluto);
+                  onClose();
+                }}
+                className="h-9 px-3 text-xs font-sans rounded-xl border border-red-500/30 bg-red-500/10 hover:bg-red-500/20 text-red-400 hover:text-red-300 transition-colors flex items-center gap-1.5 cursor-pointer"
+                title="Excluir este lead permanentemente"
+              >
+                <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M3 6h18m-2 0v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                </svg>
+                Excluir
+              </button>
+            )}
+
             <button
               onClick={() => onExportZip(caminhoAbsoluto)}
               className="btn-forgeon-secondary h-9 px-4 text-xs font-sans cursor-pointer"

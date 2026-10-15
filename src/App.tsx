@@ -234,6 +234,7 @@ export default function App() {
         onClose={() => setSelectedLeadPath(null)}
         onExportZip={handleExportZip}
         onStatusUpdated={fetchLeads}
+        onDeleteLead={handleDeleteLead}
       />
 
       {/* Forgeon V2 Footer */}

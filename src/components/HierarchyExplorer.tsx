@@ -27,6 +27,7 @@ export const HierarchyExplorer: React.FC<HierarchyExplorerProps> = ({
   onRefresh,
   onSelectLead,
   onExportZip,
+  onDeleteLead,
   onOpenNewScrape,
 }) => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -360,17 +361,31 @@ export const HierarchyExplorer: React.FC<HierarchyExplorerProps> = ({
                     <span className="text-[12px] font-sans text-[#A3A6B5] tracking-wide">
                       {lead.pais} / {lead.categoria}
                     </span>
-                    <span
-                      className={`text-xs font-mono font-bold px-2.5 py-0.5 rounded-full ${
-                        lead.classe === 'A'
-                          ? 'bg-[#4128FB]/20 text-[#85A9FA] border border-[#454DFC]/50'
-                          : lead.classe === 'B'
-                          ? 'bg-[#1F2230] text-[#A3A6B5] border border-[#292B38]'
-                          : 'bg-[#171923] text-[#A3A6B5]'
-                      }`}
-                    >
-                      Classe {lead.classe} · {lead.score} pts
-                    </span>
+                    <div className="flex items-center gap-1.5">
+                      <span
+                        className={`text-xs font-mono font-bold px-2.5 py-0.5 rounded-full ${
+                          lead.classe === 'A'
+                            ? 'bg-[#4128FB]/20 text-[#85A9FA] border border-[#454DFC]/50'
+                            : lead.classe === 'B'
+                            ? 'bg-[#1F2230] text-[#A3A6B5] border border-[#292B38]'
+                            : 'bg-[#171923] text-[#A3A6B5]'
+                        }`}
+                      >
+                        Classe {lead.classe} · {lead.score} pts
+                      </span>
+                      <button
+                        onClick={e => {
+                          e.stopPropagation();
+                          onDeleteLead(lead.caminho_absoluto);
+                        }}
+                        className="p-1 text-[#6C6F82] hover:text-red-400 hover:bg-red-500/10 rounded-lg transition-colors cursor-pointer"
+                        title="Excluir este lead"
+                      >
+                        <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                          <path d="M3 6h18m-2 0v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                        </svg>
+                      </button>
+                    </div>
                   </div>
 
                   <h3 className="text-lg font-heading font-bold text-[#F4F4F7] group-hover:text-[#85A9FA] transition-colors line-clamp-1">
@@ -485,15 +500,29 @@ export const HierarchyExplorer: React.FC<HierarchyExplorerProps> = ({
                       {lead.site_url ? lead.site_url.replace(/^https?:\/\//, '') : 'Sem site'}
                     </td>
                     <td className="px-5 py-3.5 text-right">
-                      <button
-                        onClick={e => {
-                          e.stopPropagation();
-                          onSelectLead(lead.caminho_absoluto);
-                        }}
-                        className="text-xs text-[#85A9FA] hover:underline font-semibold"
-                      >
-                        Auditar
-                      </button>
+                      <div className="flex items-center justify-end gap-2.5">
+                        <button
+                          onClick={e => {
+                            e.stopPropagation();
+                            onSelectLead(lead.caminho_absoluto);
+                          }}
+                          className="text-xs text-[#85A9FA] hover:underline font-semibold cursor-pointer"
+                        >
+                          Auditar
+                        </button>
+                        <button
+                          onClick={e => {
+                            e.stopPropagation();
+                            onDeleteLead(lead.caminho_absoluto);
+                          }}
+                          className="p-1 text-[#6C6F82] hover:text-red-400 hover:bg-red-500/10 rounded transition-colors cursor-pointer"
+                          title="Excluir este lead"
+                        >
+                          <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                            <path d="M3 6h18m-2 0v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                          </svg>
+                        </button>
+                      </div>
                     </td>
                   </tr>
                 ))}
